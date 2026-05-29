@@ -1,5 +1,5 @@
 /* ============================================================
-   SentinelSOC — interactions: i18n, nav, contact form
+   Lighthouse SOC — interactions: i18n, nav, contact form
    ============================================================ */
 (function () {
   'use strict';
@@ -7,8 +7,8 @@
   /* ---------- Translations ---------- */
   const I18N = {
     nl: {
-      'meta.title': 'SentinelSOC — Security Operations, vereenvoudigd',
-      'meta.description': 'SentinelSOC bundelt detectie, onderzoek en respons in één platform. Sneller dreigingen vinden, minder ruis, 24/7 grip op je security.',
+      'meta.title': 'Lighthouse SOC — De baken voor uw organisatie',
+      'meta.description': 'Lighthouse SOC bundelt detectie, onderzoek en respons in één platform. Sneller dreigingen vinden, minder ruis, 24/7 grip op je security.',
 
       'nav.features': 'Functies',
       'nav.how': 'Hoe het werkt',
@@ -19,7 +19,7 @@
 
       'hero.eyebrow': 'Security Operations Center platform',
       'hero.title': 'Zie elke dreiging. Reageer in seconden.',
-      'hero.lede': 'SentinelSOC bundelt detectie, onderzoek en respons in één overzichtelijk platform. Minder ruis, snellere triage en 24/7 grip op de security van je organisatie.',
+      'hero.lede': 'Lighthouse SOC bundelt detectie, onderzoek en respons in één overzichtelijk platform. Minder ruis, snellere triage en 24/7 grip op de security van je organisatie.',
       'hero.ctaPrimary': 'Neem contact op',
       'hero.ctaSecondary': 'Bekijk de demo',
       'hero.badge1': '✓ Live binnen een dag',
@@ -53,7 +53,7 @@
       'how.step1.title': 'Verbind je bronnen',
       'how.step1.body': 'Koppel cloud, endpoints, firewalls en SaaS via kant-en-klare connectoren of syslog.',
       'how.step2.title': 'Detecteer & prioriteer',
-      'how.step2.body': 'SentinelSOC correleert events en zet alleen wat telt boven aan de wachtrij.',
+      'how.step2.body': 'Lighthouse SOC correleert events en zet alleen wat telt boven aan de wachtrij.',
       'how.step3.title': 'Reageer & los op',
       'how.step3.body': 'Playbooks en analisten werken samen om het incident in te dammen en af te sluiten.',
 
@@ -64,7 +64,7 @@
 
       'integrations.eyebrow': 'Integraties',
       'integrations.title': 'Werkt met je bestaande stack',
-      'integrations.subtitle': 'Geen rip-and-replace. SentinelSOC sluit aan op de tools die je al draait.',
+      'integrations.subtitle': 'Geen rip-and-replace. Lighthouse SOC sluit aan op de tools die je al draait.',
 
       'pricing.eyebrow': 'Prijzen',
       'pricing.title': 'Transparant en schaalbaar',
@@ -103,7 +103,7 @@
       'contact.eyebrow': 'Contact',
       'contact.title': 'Klaar om je security naar een hoger niveau te tillen?',
       'contact.subtitle': 'Laat je gegevens achter en we nemen binnen één werkdag contact op voor een vrijblijvend gesprek of demo.',
-      'contact.point1': '📧 info@sentinelsoc.example',
+      'contact.point1': '📧 info@lighthouse-soc.example',
       'contact.point2': '📞 +31 (0)20 123 4567',
       'contact.point3': '📍 Amsterdam, Nederland',
 
@@ -117,13 +117,13 @@
       'form.success': 'Bedankt! We nemen binnen één werkdag contact met je op.',
       'form.error': 'Vul alsjeblieft je naam, een geldig e-mailadres en een bericht in.',
 
-      'footer.tagline': 'Security Operations, vereenvoudigd.',
+      'footer.tagline': 'De baken voor uw organisatie.',
       'footer.rights': 'Alle rechten voorbehouden.'
     },
 
     en: {
-      'meta.title': 'SentinelSOC — Security Operations, simplified',
-      'meta.description': 'SentinelSOC unifies detection, investigation and response in one platform. Find threats faster, cut the noise, stay in control 24/7.',
+      'meta.title': 'Lighthouse SOC — The beacon for your organization',
+      'meta.description': 'Lighthouse SOC unifies detection, investigation and response in one platform. Find threats faster, cut the noise, stay in control 24/7.',
 
       'nav.features': 'Features',
       'nav.how': 'How it works',
@@ -134,7 +134,7 @@
 
       'hero.eyebrow': 'Security Operations Center platform',
       'hero.title': 'See every threat. Respond in seconds.',
-      'hero.lede': 'SentinelSOC unifies detection, investigation and response in one clear platform. Less noise, faster triage and 24/7 control over your organization’s security.',
+      'hero.lede': 'Lighthouse SOC unifies detection, investigation and response in one clear platform. Less noise, faster triage and 24/7 control over your organization’s security.',
       'hero.ctaPrimary': 'Get in touch',
       'hero.ctaSecondary': 'See the demo',
       'hero.badge1': '✓ Live within a day',
@@ -168,7 +168,7 @@
       'how.step1.title': 'Connect your sources',
       'how.step1.body': 'Link cloud, endpoints, firewalls and SaaS via ready-made connectors or syslog.',
       'how.step2.title': 'Detect & prioritize',
-      'how.step2.body': 'SentinelSOC correlates events and puts only what matters at the top of the queue.',
+      'how.step2.body': 'Lighthouse SOC correlates events and puts only what matters at the top of the queue.',
       'how.step3.title': 'Respond & resolve',
       'how.step3.body': 'Playbooks and analysts work together to contain and close the incident.',
 
@@ -179,7 +179,7 @@
 
       'integrations.eyebrow': 'Integrations',
       'integrations.title': 'Works with your existing stack',
-      'integrations.subtitle': 'No rip-and-replace. SentinelSOC plugs into the tools you already run.',
+      'integrations.subtitle': 'No rip-and-replace. Lighthouse SOC plugs into the tools you already run.',
 
       'pricing.eyebrow': 'Pricing',
       'pricing.title': 'Transparent and scalable',
@@ -218,7 +218,7 @@
       'contact.eyebrow': 'Contact',
       'contact.title': 'Ready to take your security to the next level?',
       'contact.subtitle': 'Leave your details and we’ll reach out within one business day for a no-obligation chat or demo.',
-      'contact.point1': '📧 info@sentinelsoc.example',
+      'contact.point1': '📧 info@lighthouse-soc.example',
       'contact.point2': '📞 +31 (0)20 123 4567',
       'contact.point3': '📍 Amsterdam, Netherlands',
 
@@ -232,13 +232,13 @@
       'form.success': 'Thanks! We’ll get back to you within one business day.',
       'form.error': 'Please enter your name, a valid email address and a message.',
 
-      'footer.tagline': 'Security Operations, simplified.',
+      'footer.tagline': 'The beacon for your organization.',
       'footer.rights': 'All rights reserved.'
     }
   };
 
   const SUPPORTED = ['nl', 'en'];
-  const STORAGE_KEY = 'sentinelsoc-lang';
+  const STORAGE_KEY = 'lighthouse-soc-lang';
 
   /* ---------- Apply a language ---------- */
   function applyLanguage(lang) {
