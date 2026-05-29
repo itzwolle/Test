@@ -72,23 +72,19 @@
           </ul>
         </div>
 
-        <div class="hero-visual" aria-hidden="true">
-          <div class="dashboard-card">
-            <div class="dash-head">
-              <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
-              <span class="dash-title">LightHouse SOC · Live</span>
+        <div class="hero-visual">
+          <div class="shots shots-tilt" data-slider>
+            <div class="shots-frame">
+              <div class="shots-viewport">
+                <div class="shots-track">
+                  <div class="shot"><img src="assets/screens/01.png" alt="LightHouse SOC dashboard" loading="lazy" /></div>
+                  <div class="shot"><img src="assets/screens/02.png" alt="Entra ID overzicht" loading="lazy" /></div>
+                  <div class="shot"><img src="assets/screens/03.png" alt="Intune device compliance" loading="lazy" /></div>
+                  <div class="shot"><img src="assets/screens/04.png" alt="CVE en Defender" loading="lazy" /></div>
+                </div>
+              </div>
             </div>
-            <div class="dash-stats">
-              <div class="stat"><span class="num">1,284</span><span class="lbl" data-i18n="dash.events">Events / sec</span></div>
-              <div class="stat"><span class="num">7</span><span class="lbl" data-i18n="dash.alerts">Open alerts</span></div>
-              <div class="stat"><span class="num">2m 14s</span><span class="lbl" data-i18n="dash.mttr">Gem. respons</span></div>
-            </div>
-            <div class="dash-feed">
-              <div class="feed-row sev-high"><span class="sev">HIGH</span><span class="msg">Brute-force op VPN-gateway geblokkeerd</span></div>
-              <div class="feed-row sev-med"><span class="sev">MED</span><span class="msg">Ongebruikelijke login — Amsterdam → Manila</span></div>
-              <div class="feed-row sev-low"><span class="sev">LOW</span><span class="msg">Nieuw apparaat geregistreerd</span></div>
-              <div class="feed-row sev-info"><span class="sev">INFO</span><span class="msg">EDR-agent bijgewerkt op 142 hosts</span></div>
-            </div>
+            <div class="shots-dots" aria-hidden="true"></div>
           </div>
         </div>
       </div>
@@ -272,12 +268,24 @@
     <section id="demo" class="section section-alt">
       <div class="container demo-inner">
         <div class="section-head">
-          <span class="eyebrow" data-i18n="demo.eyebrow">Live demo</span>
-          <h2 data-i18n="demo.title">Binnenkort: een interactieve live demo</h2>
-          <p data-i18n="demo.subtitle">We zetten hier binnenkort een echte, klikbare demo-omgeving neer. Wil je nu al een rondleiding? Neem contact op.</p>
+          <span class="eyebrow" data-i18n="demo.eyebrow">Het platform</span>
+          <h2 data-i18n="demo.title">Een kijkje in LightHouse SOC</h2>
+          <p data-i18n="demo.subtitle">Van identity tot devices en kwetsbaarheden — alles in één helder overzicht.</p>
         </div>
-        <div class="demo-placeholder" aria-hidden="true">
-          <span class="demo-badge" data-i18n="demo.badge">Demo volgt</span>
+        <div class="shots shots-wide" data-slider>
+          <button class="shots-arrow shots-prev" type="button" aria-label="Vorige">‹</button>
+          <div class="shots-frame">
+            <div class="shots-viewport">
+              <div class="shots-track">
+                <div class="shot"><img src="assets/screens/01.png" alt="LightHouse SOC dashboard" loading="lazy" /></div>
+                <div class="shot"><img src="assets/screens/02.png" alt="Entra ID overzicht" loading="lazy" /></div>
+                <div class="shot"><img src="assets/screens/03.png" alt="Intune device compliance" loading="lazy" /></div>
+                <div class="shot"><img src="assets/screens/04.png" alt="CVE en Defender" loading="lazy" /></div>
+              </div>
+            </div>
+          </div>
+          <button class="shots-arrow shots-next" type="button" aria-label="Volgende">›</button>
+          <div class="shots-dots"></div>
         </div>
         <div class="center">
           <a href="#contact" class="btn btn-primary" data-i18n="demo.cta">Vraag een rondleiding aan</a>

@@ -101,9 +101,9 @@
       'plan.ent.f3': 'Dedicated support & SLA',
       'plan.ent.f4': 'On-prem of private cloud, SSO',
 
-      'demo.eyebrow': 'Live demo',
-      'demo.title': 'Binnenkort: een interactieve live demo',
-      'demo.subtitle': 'We zetten hier binnenkort een echte, klikbare demo-omgeving neer. Wil je nu al een rondleiding? Neem contact op.',
+      'demo.eyebrow': 'Het platform',
+      'demo.title': 'Een kijkje in LightHouse SOC',
+      'demo.subtitle': 'Van identity tot devices en kwetsbaarheden — alles in één helder overzicht.',
       'demo.badge': 'Demo volgt',
       'demo.cta': 'Vraag een rondleiding aan',
 
@@ -227,9 +227,9 @@
       'plan.ent.f3': 'Dedicated support & SLA',
       'plan.ent.f4': 'On-prem or private cloud, SSO',
 
-      'demo.eyebrow': 'Live demo',
-      'demo.title': 'Coming soon: an interactive live demo',
-      'demo.subtitle': 'We’ll set up a real, clickable demo environment here soon. Want a tour now? Get in touch.',
+      'demo.eyebrow': 'The platform',
+      'demo.title': 'A look inside LightHouse SOC',
+      'demo.subtitle': 'From identity to devices and vulnerabilities — all in one clear overview.',
       'demo.badge': 'Demo coming',
       'demo.cta': 'Request a tour',
 
@@ -399,10 +399,51 @@
     if (el) el.textContent = String(new Date().getFullYear());
   }
 
+  /* ---------- Screenshot sliders ---------- */
+  function initSliders() {
+    document.querySelectorAll('[data-slider]').forEach(function (root) {
+      const track = root.querySelector('.shots-track');
+      const slides = Array.prototype.slice.call(root.querySelectorAll('.shot'));
+      if (!track || slides.length < 2) return;
+
+      const dotsWrap = root.querySelector('.shots-dots');
+      const prev = root.querySelector('.shots-prev');
+      const next = root.querySelector('.shots-next');
+      let index = 0;
+      let timer = null;
+
+      const dots = slides.map(function (_, i) {
+        const d = document.createElement('button');
+        d.type = 'button';
+        d.setAttribute('aria-label', 'Slide ' + (i + 1));
+        d.addEventListener('click', function () { go(i); restart(); });
+        if (dotsWrap) dotsWrap.appendChild(d);
+        return d;
+      });
+
+      function go(n) {
+        index = (n + slides.length) % slides.length;
+        track.style.transform = 'translateX(-' + (index * 100) + '%)';
+        dots.forEach(function (d, i) { d.classList.toggle('active', i === index); });
+      }
+      function start() { timer = setInterval(function () { go(index + 1); }, 5000); }
+      function restart() { if (timer) clearInterval(timer); start(); }
+
+      if (prev) prev.addEventListener('click', function () { go(index - 1); restart(); });
+      if (next) next.addEventListener('click', function () { go(index + 1); restart(); });
+      root.addEventListener('mouseenter', function () { if (timer) clearInterval(timer); });
+      root.addEventListener('mouseleave', start);
+
+      go(0);
+      start();
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initLanguage();
     initNav();
     initForm();
     initYear();
+    initSliders();
   });
 })();
