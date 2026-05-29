@@ -431,6 +431,17 @@
 
       if (prev) prev.addEventListener('click', function () { go(index - 1); restart(); });
       if (next) next.addEventListener('click', function () { go(index + 1); restart(); });
+
+      // Click the left half to go back, the right half to go forward
+      const viewport = root.querySelector('.shots-viewport');
+      if (viewport) {
+        viewport.addEventListener('click', function (e) {
+          const r = viewport.getBoundingClientRect();
+          go(index + ((e.clientX - r.left) < r.width / 2 ? -1 : 1));
+          restart();
+        });
+      }
+
       root.addEventListener('mouseenter', function () { if (timer) clearInterval(timer); });
       root.addEventListener('mouseleave', start);
 
