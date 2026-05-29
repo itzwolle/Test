@@ -1,4 +1,4 @@
-# Lighthouse SOC — sales website
+# LightHouse SOC — sales website
 
 A bilingual (Dutch / English) static marketing site for a Security Operations Center (SOC) tool.
 No build step, no dependencies — just open it in a browser or drop it on any static host.
@@ -32,7 +32,7 @@ python3 -m http.server 8000
 
 ## Customizing
 
-- **Brand name / logo** — search for `Lighthouse SOC` to rename. The logo is an inline
+- **Brand name / logo** — search for `LightHouse SOC` to rename. The logo is an inline
   lighthouse SVG (in the header, footer and favicon); swap those paths for your own mark.
 - **Copy** — edit the `I18N` object in `js/main.js` (both `nl` and `en`). The matching
   `data-i18n="..."` attributes in `index.html` hold the default/Dutch text.
