@@ -104,8 +104,12 @@
       'contact.title': 'Klaar om je security naar een hoger niveau te tillen?',
       'contact.subtitle': 'Laat je gegevens achter en we nemen binnen één werkdag contact op voor een vrijblijvend gesprek of demo.',
       'contact.point1': '📧 info@lighthouse-soc.example',
-      'contact.point2': '📞 +31 (0)20 123 4567',
+      'contact.point2': '📞 +31 6 1321 4598',
       'contact.point3': '📍 Amsterdam, Nederland',
+      'contact.whatsapp': '💬 WhatsApp: +31 6 1321 4598',
+      'contact.whatsappBtn': 'Chat direct via WhatsApp',
+      'wa.label': 'Chat met ons via WhatsApp',
+      'wa.prefill': 'Hoi! Ik heb een vraag over LightHouse SOC.',
 
       'form.name': 'Naam',
       'form.email': 'Zakelijk e-mailadres',
@@ -219,8 +223,12 @@
       'contact.title': 'Ready to take your security to the next level?',
       'contact.subtitle': 'Leave your details and we’ll reach out within one business day for a no-obligation chat or demo.',
       'contact.point1': '📧 info@lighthouse-soc.example',
-      'contact.point2': '📞 +31 (0)20 123 4567',
+      'contact.point2': '📞 +31 6 1321 4598',
       'contact.point3': '📍 Amsterdam, Netherlands',
+      'contact.whatsapp': '💬 WhatsApp: +31 6 1321 4598',
+      'contact.whatsappBtn': 'Chat on WhatsApp now',
+      'wa.label': 'Chat with us on WhatsApp',
+      'wa.prefill': 'Hi! I have a question about LightHouse SOC.',
 
       'form.name': 'Name',
       'form.email': 'Business email',
@@ -239,6 +247,7 @@
 
   const SUPPORTED = ['nl', 'en'];
   const STORAGE_KEY = 'lighthouse-soc-lang';
+  const WA_NUMBER = '31613214598'; // WhatsApp number, international format without + or spaces
 
   /* ---------- Apply a language ---------- */
   function applyLanguage(lang) {
@@ -260,6 +269,13 @@
     });
 
     document.documentElement.lang = lang;
+
+    // Update WhatsApp links with a language-specific prefilled message
+    const waHref = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(dict['wa.prefill']);
+    document.querySelectorAll('[data-wa]').forEach(function (link) {
+      link.setAttribute('href', waHref);
+      link.setAttribute('aria-label', dict['wa.label']);
+    });
 
     document.querySelectorAll('.lang-switch button').forEach(function (btn) {
       const active = btn.getAttribute('data-lang') === lang;
