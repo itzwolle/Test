@@ -270,6 +270,11 @@
 
     document.documentElement.lang = lang;
 
+    // Swap logo (header + footer) to the language-specific version
+    document.querySelectorAll('[data-logo]').forEach(function (img) {
+      img.setAttribute('src', 'assets/logo-' + lang + '.png');
+    });
+
     // Update WhatsApp links with a language-specific prefilled message
     const waHref = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(dict['wa.prefill']);
     document.querySelectorAll('[data-wa]').forEach(function (link) {
