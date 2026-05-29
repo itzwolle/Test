@@ -7,7 +7,7 @@
   /* ---------- Translations ---------- */
   const I18N = {
     nl: {
-      'meta.title': 'LightHouse SOC — De baken voor uw organisatie',
+      'meta.title': 'LightHouse SOC — De baken voor uw IT omgeving',
       'meta.description': 'LightHouse SOC bundelt detectie, onderzoek en respons in één platform. Sneller dreigingen vinden, minder ruis, 24/7 grip op je security.',
 
       'nav.features': 'Functies',
@@ -121,12 +121,12 @@
       'form.success': 'Bedankt! We nemen binnen één werkdag contact met je op.',
       'form.error': 'Vul alsjeblieft je naam, een geldig e-mailadres en een bericht in.',
 
-      'footer.tagline': 'De baken voor uw organisatie.',
+      'footer.tagline': 'De baken voor uw IT omgeving.',
       'footer.rights': 'Alle rechten voorbehouden.'
     },
 
     en: {
-      'meta.title': 'LightHouse SOC — The beacon for your organization',
+      'meta.title': 'LightHouse SOC — The beacon for your IT environment',
       'meta.description': 'LightHouse SOC unifies detection, investigation and response in one platform. Find threats faster, cut the noise, stay in control 24/7.',
 
       'nav.features': 'Features',
@@ -240,7 +240,7 @@
       'form.success': 'Thanks! We’ll get back to you within one business day.',
       'form.error': 'Please enter your name, a valid email address and a message.',
 
-      'footer.tagline': 'The beacon for your organization.',
+      'footer.tagline': 'The beacon for your IT environment.',
       'footer.rights': 'All rights reserved.'
     }
   };
