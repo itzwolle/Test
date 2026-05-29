@@ -267,15 +267,17 @@ a { color: inherit; text-decoration: none; }
 .shots-prev:hover { transform: translateY(-50%) scale(1.08); }
 .shots-next:hover { transform: translateY(-50%) scale(1.08); }
 
-/* hero variant: subtle modern tilt, click hints, glow */
-.shots-tilt { perspective: 1500px; }
+/* hero variant: zoomed-in, stronger tilt, click hints, glow */
+.shots-tilt { perspective: 1400px; }
 .shots-tilt .shots-frame {
-  transform: rotateY(-11deg) rotateX(4deg);
+  transform: rotateY(-17deg) rotateX(5deg);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   box-shadow: 0 44px 80px -28px rgba(0, 0, 0, 0.85);
 }
-.shots-tilt:hover .shots-frame { transform: rotateY(-4deg) rotateX(2deg); }
+.shots-tilt:hover .shots-frame { transform: rotateY(-9deg) rotateX(3deg); }
 .shots-tilt .shots-arrow { display: none; }
+/* zoom in on the hero screenshots so they read at a glance */
+.shots-tilt .shot img { transform: scale(1.35); transform-origin: top center; }
 
 /* soft accent glow behind the hero frame */
 .shots-tilt::before {
