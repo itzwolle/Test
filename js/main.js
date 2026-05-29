@@ -30,7 +30,7 @@
       'dash.alerts': 'Open alerts',
       'dash.mttr': 'Gem. respons',
 
-      'trust.label': 'Gebouwd op standaarden die je security-team al gebruikt',
+      'trust.label': 'Leest direct uit de bronnen die je al gebruikt',
 
       'features.eyebrow': 'Functies',
       'features.title': 'Alles wat een SOC nodig heeft, op één plek',
@@ -156,7 +156,7 @@
       'dash.alerts': 'Open alerts',
       'dash.mttr': 'Avg. response',
 
-      'trust.label': 'Built on the standards your security team already uses',
+      'trust.label': 'Reads straight from the sources you already use',
 
       'features.eyebrow': 'Features',
       'features.title': 'Everything a SOC needs, in one place',
