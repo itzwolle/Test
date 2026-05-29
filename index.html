@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.title">SentinelSOC — Security Operations, vereenvoudigd</title>
+  <meta name="description" data-i18n="meta.description"
+        content="SentinelSOC bundelt detectie, onderzoek en respons in één platform. Sneller dreigingen vinden, minder ruis, 24/7 grip op je security." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>" />
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="SentinelSOC home">
+        <span class="brand-mark" aria-hidden="true">🛡️</span>
+        <span class="brand-name">Sentinel<span class="accent">SOC</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Hoofdnavigatie">
+        <a href="#features" data-i18n="nav.features">Functies</a>
+        <a href="#how" data-i18n="nav.how">Hoe het werkt</a>
+        <a href="#integrations" data-i18n="nav.integrations">Integraties</a>
+        <a href="#pricing" data-i18n="nav.pricing">Prijzen</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Taalkeuze / Language">
+          <button type="button" data-lang="nl" class="active" aria-pressed="true">NL</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a href="#contact" class="btn btn-primary btn-sm" data-i18n="nav.cta">Neem contact op</a>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow" data-i18n="hero.eyebrow">Security Operations Center platform</span>
+          <h1 data-i18n="hero.title">Zie elke dreiging. Reageer in seconden.</h1>
+          <p class="lede" data-i18n="hero.lede">
+            SentinelSOC bundelt detectie, onderzoek en respons in één overzichtelijk platform.
+            Minder ruis, snellere triage en 24/7 grip op de security van je organisatie.
+          </p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary" data-i18n="hero.ctaPrimary">Neem contact op</a>
+            <a href="#demo" class="btn btn-ghost" data-i18n="hero.ctaSecondary">Bekijk de demo</a>
+          </div>
+          <ul class="hero-badges">
+            <li data-i18n="hero.badge1">✓ Live binnen een dag</li>
+            <li data-i18n="hero.badge2">✓ ISO 27001 &amp; GDPR-ready</li>
+            <li data-i18n="hero.badge3">✓ Geen vendor lock-in</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="dashboard-card">
+            <div class="dash-head">
+              <span class="dot red"></span><span class="dot amber"></span><span class="dot green"></span>
+              <span class="dash-title">SentinelSOC · Live</span>
+            </div>
+            <div class="dash-stats">
+              <div class="stat"><span class="num">1,284</span><span class="lbl" data-i18n="dash.events">Events / sec</span></div>
+              <div class="stat"><span class="num">7</span><span class="lbl" data-i18n="dash.alerts">Open alerts</span></div>
+              <div class="stat"><span class="num">2m 14s</span><span class="lbl" data-i18n="dash.mttr">Gem. respons</span></div>
+            </div>
+            <div class="dash-feed">
+              <div class="feed-row sev-high"><span class="sev">HIGH</span><span class="msg">Brute-force op VPN-gateway geblokkeerd</span></div>
+              <div class="feed-row sev-med"><span class="sev">MED</span><span class="msg">Ongebruikelijke login — Amsterdam → Manila</span></div>
+              <div class="feed-row sev-low"><span class="sev">LOW</span><span class="msg">Nieuw apparaat geregistreerd</span></div>
+              <div class="feed-row sev-info"><span class="sev">INFO</span><span class="msg">EDR-agent bijgewerkt op 142 hosts</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Trust bar ===== -->
+    <section class="trustbar">
+      <div class="container trust-inner">
+        <p class="trust-label" data-i18n="trust.label">Gebouwd op standaarden die je security-team al gebruikt</p>
+        <ul class="trust-logos">
+          <li>MITRE ATT&amp;CK</li>
+          <li>Sigma</li>
+          <li>STIX/TAXII</li>
+          <li>Syslog</li>
+          <li>OpenTelemetry</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Features ===== -->
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-i18n="features.eyebrow">Functies</span>
+          <h2 data-i18n="features.title">Alles wat een SOC nodig heeft, op één plek</h2>
+          <p data-i18n="features.subtitle">Van datacollectie tot geautomatiseerde respons — zonder losse tools aan elkaar te knopen.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature">
+            <div class="feature-icon">🛰️</div>
+            <h3 data-i18n="feature.detect.title">Realtime detectie</h3>
+            <p data-i18n="feature.detect.body">Correleer logs, endpoints en netwerkverkeer met regels op basis van MITRE ATT&amp;CK en gedrag.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon">🔎</div>
+            <h3 data-i18n="feature.investigate.title">Snel onderzoek</h3>
+            <p data-i18n="feature.investigate.body">Eén tijdlijn per incident met alle context, zodat analisten in minuten weten wat er speelt.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon">⚡</div>
+            <h3 data-i18n="feature.respond.title">Geautomatiseerde respons</h3>
+            <p data-i18n="feature.respond.body">Playbooks isoleren hosts, blokkeren accounts en openen tickets — automatisch of met één klik.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon">🧠</div>
+            <h3 data-i18n="feature.intel.title">Threat intelligence</h3>
+            <p data-i18n="feature.intel.body">Verrijk alerts met actuele IOC-feeds via STIX/TAXII en filter automatisch de ruis weg.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon">📊</div>
+            <h3 data-i18n="feature.compliance.title">Compliance &amp; rapportage</h3>
+            <p data-i18n="feature.compliance.body">Kant-en-klare dashboards en exports voor ISO 27001, NIS2 en GDPR-audits.</p>
+          </article>
+          <article class="feature">
+            <div class="feature-icon">🌙</div>
+            <h3 data-i18n="feature.monitor.title">24/7 monitoring</h3>
+            <p data-i18n="feature.monitor.body">Slimme alerting via e-mail, Slack en Teams, met escalatie wanneer het er echt toe doet.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== How it works ===== -->
+    <section id="how" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-i18n="how.eyebrow">Hoe het werkt</span>
+          <h2 data-i18n="how.title">Van data naar respons in drie stappen</h2>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num">1</span>
+            <h3 data-i18n="how.step1.title">Verbind je bronnen</h3>
+            <p data-i18n="how.step1.body">Koppel cloud, endpoints, firewalls en SaaS via kant-en-klare connectoren of syslog.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">2</span>
+            <h3 data-i18n="how.step2.title">Detecteer &amp; prioriteer</h3>
+            <p data-i18n="how.step2.body">SentinelSOC correleert events en zet alleen wat telt boven aan de wachtrij.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">3</span>
+            <h3 data-i18n="how.step3.title">Reageer &amp; los op</h3>
+            <p data-i18n="how.step3.body">Playbooks en analisten werken samen om het incident in te dammen en af te sluiten.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Stats ===== -->
+    <section class="section stats-section">
+      <div class="container stats-grid">
+        <div class="big-stat"><span class="num">90%</span><span class="lbl" data-i18n="stats.noise">minder alert-ruis</span></div>
+        <div class="big-stat"><span class="num">&lt; 3 min</span><span class="lbl" data-i18n="stats.mttr">gemiddelde reactietijd</span></div>
+        <div class="big-stat"><span class="num">200+</span><span class="lbl" data-i18n="stats.connectors">kant-en-klare connectoren</span></div>
+        <div class="big-stat"><span class="num">24/7</span><span class="lbl" data-i18n="stats.coverage">monitoring &amp; alerting</span></div>
+      </div>
+    </section>
+
+    <!-- ===== Integrations ===== -->
+    <section id="integrations" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-i18n="integrations.eyebrow">Integraties</span>
+          <h2 data-i18n="integrations.title">Werkt met je bestaande stack</h2>
+          <p data-i18n="integrations.subtitle">Geen rip-and-replace. SentinelSOC sluit aan op de tools die je al draait.</p>
+        </div>
+        <ul class="integration-grid">
+          <li>AWS</li><li>Azure</li><li>Google Cloud</li><li>Microsoft 365</li>
+          <li>CrowdStrike</li><li>SentinelOne</li><li>Okta</li><li>Cloudflare</li>
+          <li>Palo Alto</li><li>Fortinet</li><li>Slack</li><li>Jira</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Pricing ===== -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-i18n="pricing.eyebrow">Prijzen</span>
+          <h2 data-i18n="pricing.title">Transparant en schaalbaar</h2>
+          <p data-i18n="pricing.subtitle">Begin klein, groei mee. Alle plannen bevatten onbeperkte gebruikers.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="plan">
+            <h3 data-i18n="plan.starter.name">Starter</h3>
+            <p class="plan-price"><span class="amount" data-i18n="plan.starter.price">€499</span><span class="per" data-i18n="plan.perMonth">/ maand</span></p>
+            <p class="plan-desc" data-i18n="plan.starter.desc">Voor kleine teams die grip willen op hun security.</p>
+            <ul class="plan-features">
+              <li data-i18n="plan.starter.f1">Tot 25 bronnen</li>
+              <li data-i18n="plan.starter.f2">Realtime detectie</li>
+              <li data-i18n="plan.starter.f3">E-mail &amp; Slack alerts</li>
+              <li data-i18n="plan.starter.f4">30 dagen retentie</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-block" data-i18n="plan.cta">Neem contact op</a>
+          </article>
+
+          <article class="plan plan-featured">
+            <span class="plan-tag" data-i18n="plan.popular">Meest gekozen</span>
+            <h3 data-i18n="plan.pro.name">Professional</h3>
+            <p class="plan-price"><span class="amount" data-i18n="plan.pro.price">€1.499</span><span class="per" data-i18n="plan.perMonth">/ maand</span></p>
+            <p class="plan-desc" data-i18n="plan.pro.desc">Voor groeiende organisaties met een eigen SOC-team.</p>
+            <ul class="plan-features">
+              <li data-i18n="plan.pro.f1">Tot 150 bronnen</li>
+              <li data-i18n="plan.pro.f2">Geautomatiseerde playbooks</li>
+              <li data-i18n="plan.pro.f3">Threat intelligence feeds</li>
+              <li data-i18n="plan.pro.f4">1 jaar retentie</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-block" data-i18n="plan.cta">Neem contact op</a>
+          </article>
+
+          <article class="plan">
+            <h3 data-i18n="plan.ent.name">Enterprise</h3>
+            <p class="plan-price"><span class="amount" data-i18n="plan.ent.price">Op maat</span></p>
+            <p class="plan-desc" data-i18n="plan.ent.desc">Voor complexe omgevingen en strenge compliance-eisen.</p>
+            <ul class="plan-features">
+              <li data-i18n="plan.ent.f1">Onbeperkte bronnen</li>
+              <li data-i18n="plan.ent.f2">Dedicated support &amp; SLA</li>
+              <li data-i18n="plan.ent.f3">On-prem of private cloud</li>
+              <li data-i18n="plan.ent.f4">Custom retentie &amp; SSO</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-block" data-i18n="plan.cta">Neem contact op</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Demo placeholder ===== -->
+    <section id="demo" class="section section-alt">
+      <div class="container demo-inner">
+        <div class="section-head">
+          <span class="eyebrow" data-i18n="demo.eyebrow">Live demo</span>
+          <h2 data-i18n="demo.title">Binnenkort: een interactieve live demo</h2>
+          <p data-i18n="demo.subtitle">We zetten hier binnenkort een echte, klikbare demo-omgeving neer. Wil je nu al een rondleiding? Neem contact op.</p>
+        </div>
+        <div class="demo-placeholder" aria-hidden="true">
+          <span class="demo-badge" data-i18n="demo.badge">Demo volgt</span>
+        </div>
+        <div class="center">
+          <a href="#contact" class="btn btn-primary" data-i18n="demo.cta">Vraag een rondleiding aan</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section">
+      <div class="container contact-inner">
+        <div class="contact-copy">
+          <span class="eyebrow" data-i18n="contact.eyebrow">Contact</span>
+          <h2 data-i18n="contact.title">Klaar om je security naar een hoger niveau te tillen?</h2>
+          <p data-i18n="contact.subtitle">Laat je gegevens achter en we nemen binnen één werkdag contact op voor een vrijblijvend gesprek of demo.</p>
+          <ul class="contact-points">
+            <li data-i18n="contact.point1">📧 info@sentinelsoc.example</li>
+            <li data-i18n="contact.point2">📞 +31 (0)20 123 4567</li>
+            <li data-i18n="contact.point3">📍 Amsterdam, Nederland</li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name" data-i18n="form.name">Naam</label>
+            <input type="text" id="name" name="name" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="email" data-i18n="form.email">Zakelijk e-mailadres</label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="company" data-i18n="form.company">Organisatie</label>
+            <input type="text" id="company" name="company" autocomplete="organization" />
+          </div>
+          <div class="field">
+            <label for="message" data-i18n="form.message">Waar kunnen we mee helpen?</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">Verstuur bericht</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          <p class="form-note" data-i18n="form.note">We gebruiken je gegevens alleen om contact op te nemen. Geen spam.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">🛡️</span>
+        <span class="brand-name">Sentinel<span class="accent">SOC</span></span>
+        <p data-i18n="footer.tagline">Security Operations, vereenvoudigd.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#features" data-i18n="nav.features">Functies</a>
+        <a href="#how" data-i18n="nav.how">Hoe het werkt</a>
+        <a href="#pricing" data-i18n="nav.pricing">Prijzen</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year">2026</span> SentinelSOC. <span data-i18n="footer.rights">Alle rechten voorbehouden.</span></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
