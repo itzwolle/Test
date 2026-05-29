@@ -305,6 +305,7 @@ a { color: inherit; text-decoration: none; }
 
 /* demo (wide) variant */
 .shots-wide { max-width: 940px; margin: 0 auto; }
+.shots-wide + .center { margin-top: 44px; }
 
 /* ===== Trust bar ===== */
 .trustbar { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--bg-alt); }
