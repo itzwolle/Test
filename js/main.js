@@ -59,7 +59,7 @@
 
       'stats.noise': 'minder alert-ruis',
       'stats.mttr': 'gemiddelde reactietijd',
-      'stats.connectors': 'kant-en-klare connectoren',
+      'stats.connectors': 'weekly report ready',
       'stats.coverage': 'monitoring & alerting',
 
       'integrations.eyebrow': 'Integraties',
@@ -69,6 +69,7 @@
       'pricing.eyebrow': 'Prijzen',
       'pricing.title': 'Transparant en schaalbaar',
       'pricing.subtitle': 'Prijs per actieve Microsoft-licentie. Kies het pakket dat bij uw organisatie past.',
+      'pricing.note': 'Vereist Microsoft Business Premium. Doordat je met ons SOC meer grip krijgt, bespaar je direct op je licenties.',
       'plan.perMonth': '/ maand',
       'plan.popular': 'Meest gekozen',
       'plan.cta': 'Neem contact op',
@@ -130,6 +131,7 @@
       'form.sending': 'Bezig met verzenden…',
       'form.success': 'Bedankt! We nemen binnen één werkdag contact met je op.',
       'form.error': 'Vul alsjeblieft je naam, een geldig e-mailadres en een bericht in.',
+      'form.errorSend': 'Verzenden lukte niet. Probeer het later opnieuw of mail ons direct.',
 
       'footer.tagline': 'De baken voor uw IT omgeving.',
       'footer.rights': 'Alle rechten voorbehouden.'
@@ -188,7 +190,7 @@
 
       'stats.noise': 'less alert noise',
       'stats.mttr': 'average response time',
-      'stats.connectors': 'ready-made connectors',
+      'stats.connectors': 'weekly report ready',
       'stats.coverage': 'monitoring & alerting',
 
       'integrations.eyebrow': 'Integrations',
@@ -198,6 +200,7 @@
       'pricing.eyebrow': 'Pricing',
       'pricing.title': 'Transparent and scalable',
       'pricing.subtitle': 'Priced per active Microsoft license. Pick the plan that fits your organization.',
+      'pricing.note': 'Requires Microsoft Business Premium. Because our SOC gives you more control, you save on licenses right away.',
       'plan.perMonth': '/ month',
       'plan.popular': 'Most popular',
       'plan.cta': 'Get in touch',
@@ -259,6 +262,7 @@
       'form.sending': 'Sending…',
       'form.success': 'Thanks! We’ll get back to you within one business day.',
       'form.error': 'Please enter your name, a valid email address and a message.',
+      'form.errorSend': 'Sending failed. Please try again later or email us directly.',
 
       'footer.tagline': 'The beacon for your IT environment.',
       'footer.rights': 'All rights reserved.'
@@ -313,13 +317,11 @@
 
   /* ---------- Init language ---------- */
   function initLanguage() {
-    let lang = 'nl';
+    let lang = 'en'; // default to English
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
       if (stored && SUPPORTED.includes(stored)) {
         lang = stored;
-      } else if (navigator.language && navigator.language.toLowerCase().startsWith('en')) {
-        lang = 'en';
       }
     } catch (e) { /* ignore */ }
 
@@ -385,17 +387,35 @@
         return;
       }
 
-      // NOTE: This is a static site with no backend yet.
-      // To receive submissions, wire this up to a service such as Formspree,
-      // Netlify Forms, or your own endpoint. For now we show a confirmation.
+      // Send via FormSubmit (free, no backend). Delivers to the inbox below.
+      // First submission triggers a one-time activation email to confirm.
       status.textContent = dict['form.sending'];
       status.className = 'form-status';
 
-      setTimeout(function () {
-        status.textContent = dict['form.success'];
-        status.className = 'form-status success';
-        form.reset();
-      }, 600);
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
+
+      const data = new FormData(form);
+      data.append('_subject', 'Nieuw bericht via lighthousesoc.com');
+      data.append('_template', 'table');
+      data.append('_captcha', 'false');
+
+      fetch('https://formsubmit.co/ajax/info@lighthousesoc.com', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: data
+      })
+        .then(function (r) { if (!r.ok) throw new Error('bad status'); return r.json(); })
+        .then(function () {
+          status.textContent = dict['form.success'];
+          status.className = 'form-status success';
+          form.reset();
+        })
+        .catch(function () {
+          status.textContent = dict['form.errorSend'];
+          status.className = 'form-status error';
+        })
+        .then(function () { if (submitBtn) submitBtn.disabled = false; });
     });
   }
 
