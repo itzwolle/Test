@@ -47,6 +47,10 @@
       'feature.compliance.body': 'Kant-en-klare dashboards en exports voor ISO 27001, NIS2 en GDPR-audits.',
       'feature.monitor.title': '24/7 monitoring',
       'feature.monitor.body': 'Slimme alerting via e-mail, Slack en Teams, met escalatie wanneer het er echt toe doet.',
+      'feature.search.title': 'Uitgebreide zoekfilters',
+      'feature.search.body': 'Doorzoek en filter elk event razendsnel op gebruiker, device, severity, tijd en meer.',
+      'feature.retention.title': 'Flexibele bewaartermijn',
+      'feature.retention.body': 'Bewaar je data 30, 60, 180 of 365 dagen — afgestemd op je compliance-eisen.',
 
       'how.eyebrow': 'Hoe het werkt',
       'how.title': 'Van data naar respons in drie stappen',
@@ -182,6 +186,10 @@
       'feature.compliance.body': 'Ready-made dashboards and exports for ISO 27001, NIS2 and GDPR audits.',
       'feature.monitor.title': '24/7 monitoring',
       'feature.monitor.body': 'Smart alerting via email, Slack and Teams, with escalation when it really matters.',
+      'feature.search.title': 'Powerful search & filters',
+      'feature.search.body': 'Search and filter every event in a flash by user, device, severity, time and more.',
+      'feature.retention.title': 'Flexible retention',
+      'feature.retention.body': 'Keep your data for 30, 60, 180 or 365 days — tailored to your compliance needs.',
 
       'how.eyebrow': 'How it works',
       'how.title': 'From data to response in three steps',

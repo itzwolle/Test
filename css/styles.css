@@ -344,7 +344,7 @@ a { color: inherit; text-decoration: none; }
 .section-head p { color: var(--muted); font-size: 1.05rem; margin: 0; }
 
 /* ===== Features ===== */
-.feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .feature {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -488,6 +488,7 @@ a { color: inherit; text-decoration: none; }
 /* ===== Responsive ===== */
 @media (max-width: 1080px) {
   .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+  .feature-grid { grid-template-columns: repeat(2, 1fr); }
   .plan-featured { transform: none; }
 }
 
