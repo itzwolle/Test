@@ -25,6 +25,7 @@
       'hero.badge1': '✓ Live binnen een dag',
       'hero.badge2': '✓ NIS2, ISO 27001 & GDPR-ready',
       'hero.badge3': '✓ Geen vendor lock-in',
+      'hero.badge4': '🇳🇱 Made in Holland — data in NL',
 
       'dash.events': 'Events / sec',
       'dash.alerts': 'Open alerts',
@@ -73,6 +74,9 @@
       'nis2.title': 'Klaar voor NIS2',
       'nis2.body': 'Continue monitoring, snelle incidentrespons en wekelijkse rapportages — precies wat de NIS2-richtlijn van organisaties vraagt. Met LightHouse SOC blijf je aantoonbaar in control.',
       'nis2.cta': 'Meer over NIS2',
+
+      'made.title': 'Made in Holland — jouw data blijft in Nederland',
+      'made.body': 'LightHouse SOC is volledig in Nederland ontwikkeld én gehost. Je security-data verlaat het land niet: volledige datasoevereiniteit en AVG-proof, zonder afhankelijkheid van Amerikaanse clouds.',
 
       'pricing.eyebrow': 'Prijzen',
       'pricing.title': 'Transparant en schaalbaar',
@@ -164,6 +168,7 @@
       'hero.badge1': '✓ Live within a day',
       'hero.badge2': '✓ NIS2, ISO 27001 & GDPR-ready',
       'hero.badge3': '✓ No vendor lock-in',
+      'hero.badge4': '🇳🇱 Made in Holland — data in NL',
 
       'dash.events': 'Events / sec',
       'dash.alerts': 'Open alerts',
@@ -212,6 +217,9 @@
       'nis2.title': 'NIS2-ready',
       'nis2.body': 'Continuous monitoring, fast incident response and weekly reporting — exactly what the NIS2 directive expects from organizations. With LightHouse SOC you stay demonstrably in control.',
       'nis2.cta': 'More about NIS2',
+
+      'made.title': 'Made in Holland — your data stays in the Netherlands',
+      'made.body': 'LightHouse SOC is fully developed and hosted in the Netherlands. Your security data never leaves the country: full data sovereignty and GDPR-proof, with no dependency on US clouds.',
 
       'pricing.eyebrow': 'Pricing',
       'pricing.title': 'Transparent and scalable',
