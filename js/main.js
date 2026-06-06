@@ -23,7 +23,7 @@
       'hero.ctaPrimary': 'Neem contact op',
       'hero.ctaSecondary': 'Bekijk de demo',
       'hero.badge1': '✓ Live binnen een dag',
-      'hero.badge2': '✓ ISO 27001 & GDPR-ready',
+      'hero.badge2': '✓ NIS2, ISO 27001 & GDPR-ready',
       'hero.badge3': '✓ Geen vendor lock-in',
 
       'dash.events': 'Events / sec',
@@ -65,6 +65,10 @@
       'integrations.eyebrow': 'Integraties',
       'integrations.title': 'Werkt met je bestaande stack',
       'integrations.subtitle': 'Geen rip-and-replace. LightHouse SOC sluit aan op de tools die je al draait.',
+
+      'nis2.title': 'Klaar voor NIS2',
+      'nis2.body': 'Continue monitoring, snelle incidentrespons en wekelijkse rapportages — precies wat de NIS2-richtlijn van organisaties vraagt. Met LightHouse SOC blijf je aantoonbaar in control.',
+      'nis2.cta': 'Meer over NIS2',
 
       'pricing.eyebrow': 'Prijzen',
       'pricing.title': 'Transparant en schaalbaar',
@@ -154,7 +158,7 @@
       'hero.ctaPrimary': 'Get in touch',
       'hero.ctaSecondary': 'See the demo',
       'hero.badge1': '✓ Live within a day',
-      'hero.badge2': '✓ ISO 27001 & GDPR-ready',
+      'hero.badge2': '✓ NIS2, ISO 27001 & GDPR-ready',
       'hero.badge3': '✓ No vendor lock-in',
 
       'dash.events': 'Events / sec',
@@ -196,6 +200,10 @@
       'integrations.eyebrow': 'Integrations',
       'integrations.title': 'Works with your existing stack',
       'integrations.subtitle': 'No rip-and-replace. LightHouse SOC plugs into the tools you already run.',
+
+      'nis2.title': 'NIS2-ready',
+      'nis2.body': 'Continuous monitoring, fast incident response and weekly reporting — exactly what the NIS2 directive expects from organizations. With LightHouse SOC you stay demonstrably in control.',
+      'nis2.cta': 'More about NIS2',
 
       'pricing.eyebrow': 'Pricing',
       'pricing.title': 'Transparent and scalable',
