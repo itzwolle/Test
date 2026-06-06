@@ -96,7 +96,7 @@ a { color: inherit; text-decoration: none; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(10, 14, 26, 0.8);
+  background: #000512;
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
@@ -451,7 +451,7 @@ a { color: inherit; text-decoration: none; }
 .form-note { margin: 12px 0 0; font-size: 0.82rem; color: var(--muted); }
 
 /* ===== Footer ===== */
-.site-footer { background: var(--bg-alt); border-top: 1px solid var(--border); padding: 48px 0 28px; }
+.site-footer { background: #000512; border-top: 1px solid var(--border); padding: 48px 0 28px; }
 .footer-inner { display: flex; justify-content: space-between; gap: 32px; flex-wrap: wrap; margin-bottom: 32px; }
 .footer-brand { display: flex; flex-direction: column; gap: 6px; max-width: 320px; }
 .footer-logo { width: 300px; max-width: 100%; height: auto; display: block; }
