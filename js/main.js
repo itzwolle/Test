@@ -52,6 +52,8 @@
       'feature.search.body': 'Doorzoek en filter elk event razendsnel op gebruiker, device, severity, tijd en meer.',
       'feature.retention.title': 'Flexibele bewaartermijn',
       'feature.retention.body': 'Bewaar je data 30, 60, 180 of 365 dagen — afgestemd op je compliance-eisen.',
+      'feature.license.title': 'Microsoft licentie-kostenrapport',
+      'feature.license.body': 'Automatisch kostenoverzicht van alle licenties in je Microsoft-tenant. Zie waar je te veel betaalt en stop met betalen voor licenties die je niet gebruikt.',
 
       'how.eyebrow': 'Hoe het werkt',
       'how.title': 'Van data naar respons in drie stappen',
@@ -195,6 +197,8 @@
       'feature.search.body': 'Search and filter every event in a flash by user, device, severity, time and more.',
       'feature.retention.title': 'Flexible retention',
       'feature.retention.body': 'Keep your data for 30, 60, 180 or 365 days — tailored to your compliance needs.',
+      'feature.license.title': 'Microsoft license cost report',
+      'feature.license.body': 'Automatic cost overview of every license in your Microsoft tenant. See where you overpay and stop paying for licenses you don’t use.',
 
       'how.eyebrow': 'How it works',
       'how.title': 'From data to response in three steps',
