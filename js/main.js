@@ -424,7 +424,7 @@
       data.append('_template', 'table');
       data.append('_captcha', 'false');
 
-      fetch('https://formsubmit.co/ajax/info@lighthousesoc.com', {
+      fetch('https://formsubmit.co/ajax/4bfb60e185e24367331ff97cdd07c324', {
         method: 'POST',
         headers: { 'Accept': 'application/json' },
         body: data
