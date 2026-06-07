@@ -318,20 +318,25 @@
           <h2 data-i18n="demo.title">Een kijkje in LightHouse SOC</h2>
           <p data-i18n="demo.subtitle">Van identity tot devices en kwetsbaarheden — alles in één helder overzicht.</p>
         </div>
-        <div class="shots shots-wide" data-slider>
+        <div class="shots shots-wide" data-slider data-lightbox>
           <button class="shots-arrow shots-prev" type="button" aria-label="Vorige">‹</button>
           <div class="shots-frame">
             <div class="shots-viewport">
               <div class="shots-track">
-                <div class="shot"><img src="assets/screens/01.png" alt="LightHouse SOC dashboard" loading="lazy" /></div>
-                <div class="shot"><img src="assets/screens/02.png" alt="Entra ID overzicht" loading="lazy" /></div>
-                <div class="shot"><img src="assets/screens/03.png" alt="Intune device compliance" loading="lazy" /></div>
-                <div class="shot"><img src="assets/screens/04.png" alt="Defender overzicht" loading="lazy" /></div>
+                <div class="shot" data-shot="1"><img src="assets/screens/01.png" alt="LightHouse SOC dashboard" loading="lazy" /></div>
+                <div class="shot" data-shot="2"><img src="assets/screens/02.png" alt="Entra ID overzicht" loading="lazy" /></div>
+                <div class="shot" data-shot="3"><img src="assets/screens/03.png" alt="Intune device compliance" loading="lazy" /></div>
+                <div class="shot" data-shot="4"><img src="assets/screens/04.png" alt="Defender overzicht" loading="lazy" /></div>
               </div>
             </div>
           </div>
           <button class="shots-arrow shots-next" type="button" aria-label="Volgende">›</button>
+          <div class="shots-caption" aria-live="polite">
+            <span class="shots-caption-title" data-i18n="demo.shot1.title">Dashboard</span>
+            <span class="shots-caption-desc" data-i18n="demo.shot1.desc">Secure score, incidenten, MFA en devices in één oogopslag.</span>
+          </div>
           <div class="shots-dots"></div>
+          <p class="shots-hint" data-i18n="demo.hint">Tik of swipe — klik om te vergroten</p>
         </div>
         <div class="center">
           <a href="#contact" class="btn btn-primary" data-i18n="demo.cta">Vraag een rondleiding aan</a>
@@ -409,6 +414,20 @@
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.611-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
   </a>
+
+  <!-- Lightbox (enlarged demo screenshots) -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Screenshot">
+    <button class="lb-close" type="button" aria-label="Sluiten">&times;</button>
+    <button class="lb-arrow lb-prev" type="button" aria-label="Vorige">‹</button>
+    <figure class="lb-figure">
+      <img class="lb-img" src="" alt="" />
+      <figcaption class="lb-cap">
+        <span class="lb-title"></span>
+        <span class="lb-desc"></span>
+      </figcaption>
+    </figure>
+    <button class="lb-arrow lb-next" type="button" aria-label="Volgende">›</button>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

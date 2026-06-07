@@ -124,6 +124,15 @@
       'demo.subtitle': 'Van identity tot devices en kwetsbaarheden — alles in één helder overzicht.',
       'demo.badge': 'Demo volgt',
       'demo.cta': 'Vraag een rondleiding aan',
+      'demo.hint': 'Tik of swipe — klik om te vergroten',
+      'demo.shot1.title': 'Dashboard',
+      'demo.shot1.desc': 'Secure score, incidenten, MFA en devices in één oogopslag.',
+      'demo.shot2.title': 'Entra ID',
+      'demo.shot2.desc': 'Identity & access — risky sign-ins, admins en MFA-status.',
+      'demo.shot3.title': 'Intune',
+      'demo.shot3.desc': 'Device-compliance, OS-verdeling en enrollments.',
+      'demo.shot4.title': 'Defender',
+      'demo.shot4.desc': 'Kwetsbaarheden, endpoints en alerts in één overzicht.',
 
       'contact.eyebrow': 'Contact',
       'contact.title': 'Klaar om je security naar een hoger niveau te tillen?',
@@ -269,6 +278,15 @@
       'demo.subtitle': 'From identity to devices and vulnerabilities — all in one clear overview.',
       'demo.badge': 'Demo coming',
       'demo.cta': 'Request a tour',
+      'demo.hint': 'Tap or swipe — click to enlarge',
+      'demo.shot1.title': 'Dashboard',
+      'demo.shot1.desc': 'Secure score, incidents, MFA and devices at a glance.',
+      'demo.shot2.title': 'Entra ID',
+      'demo.shot2.desc': 'Identity & access — risky sign-ins, admins and MFA status.',
+      'demo.shot3.title': 'Intune',
+      'demo.shot3.desc': 'Device compliance, OS distribution and enrollments.',
+      'demo.shot4.title': 'Defender',
+      'demo.shot4.desc': 'Vulnerabilities, endpoints and alerts in one overview.',
 
       'contact.eyebrow': 'Contact',
       'contact.title': 'Ready to take your security to the next level?',
@@ -454,7 +472,85 @@
   }
 
   /* ---------- Screenshot sliders ---------- */
+  function langKey() { return document.documentElement.lang === 'en' ? 'en' : 'nl'; }
+
+  // Touch / mouse swipe with tap detection
+  function addSwipe(el, onRight, onLeft, onTap) {
+    let x0 = null, y0 = null, moved = false;
+    el.addEventListener('pointerdown', function (e) {
+      if (typeof e.button === 'number' && e.button !== 0) return;
+      x0 = e.clientX; y0 = e.clientY; moved = false;
+    });
+    el.addEventListener('pointermove', function (e) {
+      if (x0 === null) return;
+      if (Math.abs(e.clientX - x0) > 8 || Math.abs(e.clientY - y0) > 8) moved = true;
+    });
+    function end(e) {
+      if (x0 === null) return;
+      const dx = e.clientX - x0, dy = e.clientY - y0;
+      x0 = null;
+      if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) {
+        if (dx < 0) onLeft(); else onRight();
+      } else if (!moved) {
+        onTap(e);
+      }
+    }
+    el.addEventListener('pointerup', end);
+    el.addEventListener('pointercancel', function () { x0 = null; });
+  }
+
+  // Shared lightbox for enlarging screenshots
+  function setupLightbox() {
+    const lb = document.getElementById('lightbox');
+    if (!lb) return { open: function () {} };
+    const img = lb.querySelector('.lb-img');
+    const titleEl = lb.querySelector('.lb-title');
+    const descEl = lb.querySelector('.lb-desc');
+    let curSlides = [], idx = 0;
+
+    function render() {
+      const slide = curSlides[idx]; if (!slide) return;
+      const im = slide.querySelector('img');
+      img.src = im.getAttribute('src');
+      img.alt = im.getAttribute('alt') || '';
+      const n = slide.getAttribute('data-shot');
+      const dict = I18N[langKey()];
+      titleEl.textContent = (n && dict['demo.shot' + n + '.title']) || '';
+      descEl.textContent = (n && dict['demo.shot' + n + '.desc']) || '';
+    }
+    function open(slides, start) {
+      curSlides = slides; idx = start; render();
+      lb.classList.add('open');
+      lb.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function close() {
+      lb.classList.remove('open');
+      lb.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+    function step(d) { if (curSlides.length) { idx = (idx + d + curSlides.length) % curSlides.length; render(); } }
+
+    lb.querySelector('.lb-close').addEventListener('click', close);
+    lb.querySelector('.lb-prev').addEventListener('click', function (e) { e.stopPropagation(); step(-1); });
+    lb.querySelector('.lb-next').addEventListener('click', function (e) { e.stopPropagation(); step(1); });
+    lb.addEventListener('click', function (e) {
+      if (e.target === lb || e.target.classList.contains('lb-figure') || e.target.classList.contains('lb-cap')) close();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') step(-1);
+      else if (e.key === 'ArrowRight') step(1);
+    });
+    addSwipe(lb, function () { step(-1); }, function () { step(1); }, function () {});
+
+    return { open: open };
+  }
+
   function initSliders() {
+    const lb = setupLightbox();
+
     document.querySelectorAll('[data-slider]').forEach(function (root) {
       const track = root.querySelector('.shots-track');
       const slides = Array.prototype.slice.call(root.querySelectorAll('.shot'));
@@ -463,8 +559,11 @@
       const dotsWrap = root.querySelector('.shots-dots');
       const prev = root.querySelector('.shots-prev');
       const next = root.querySelector('.shots-next');
-      let index = 0;
-      let timer = null;
+      const viewport = root.querySelector('.shots-viewport');
+      const capTitle = root.querySelector('.shots-caption-title');
+      const capDesc = root.querySelector('.shots-caption-desc');
+      const hasLightbox = root.hasAttribute('data-lightbox');
+      let index = 0, timer = null;
 
       const dots = slides.map(function (_, i) {
         const d = document.createElement('button');
@@ -475,10 +574,22 @@
         return d;
       });
 
+      function updateCaption() {
+        if (!capTitle || !capDesc) return;
+        const n = slides[index].getAttribute('data-shot'); if (!n) return;
+        const tk = 'demo.shot' + n + '.title', dk = 'demo.shot' + n + '.desc';
+        capTitle.setAttribute('data-i18n', tk);
+        capDesc.setAttribute('data-i18n', dk);
+        const dict = I18N[langKey()];
+        if (dict[tk]) capTitle.textContent = dict[tk];
+        if (dict[dk]) capDesc.textContent = dict[dk];
+      }
+
       function go(n) {
         index = (n + slides.length) % slides.length;
         track.style.transform = 'translateX(-' + (index * 100) + '%)';
         dots.forEach(function (d, i) { d.classList.toggle('active', i === index); });
+        updateCaption();
       }
       function start() { timer = setInterval(function () { go(index + 1); }, 5000); }
       function restart() { if (timer) clearInterval(timer); start(); }
@@ -486,14 +597,20 @@
       if (prev) prev.addEventListener('click', function () { go(index - 1); restart(); });
       if (next) next.addEventListener('click', function () { go(index + 1); restart(); });
 
-      // Click the left half to go back, the right half to go forward
-      const viewport = root.querySelector('.shots-viewport');
       if (viewport) {
-        viewport.addEventListener('click', function (e) {
-          const r = viewport.getBoundingClientRect();
-          go(index + ((e.clientX - r.left) < r.width / 2 ? -1 : 1));
-          restart();
-        });
+        addSwipe(viewport,
+          function () { go(index - 1); restart(); },
+          function () { go(index + 1); restart(); },
+          function (e) {
+            if (hasLightbox) {
+              lb.open(slides, index);
+            } else {
+              const r = viewport.getBoundingClientRect();
+              go(index + ((e.clientX - r.left) < r.width / 2 ? -1 : 1));
+              restart();
+            }
+          }
+        );
       }
 
       root.addEventListener('mouseenter', function () { if (timer) clearInterval(timer); });
