@@ -84,6 +84,8 @@
       'ai.title': 'AI-samenvatting van je dashboards',
       'ai.body': 'Naast alerts en inzichten genereert LightHouse SOC nu ook een AI-samenvatting van elk dashboard en alle logs. Dit scheelt enorm veel tijd — in seconden weet je wat er speelt.',
 
+      'ai.optin': '🔒 Niet standaard aan — alleen als je er zelf voor kiest.',
+
       'pricing.eyebrow': 'Prijzen',
       'pricing.title': 'Transparant en schaalbaar',
       'pricing.subtitle': 'Prijs per actieve Microsoft-licentie. Kies het pakket dat bij uw organisatie past.',
@@ -115,13 +117,15 @@
       'plan.pro.f3': 'SSO',
       'plan.pro.f4': 'Geautomatiseerde playbooks',
       'plan.pro.f5': 'Prioriteit-support',
+      'plan.pro.f6': 'AI-samenvattingen (optioneel)',
       'plan.ent.name': 'Enterprise',
       'plan.ent.price': 'Op maat',
       'plan.ent.desc': 'Voor meer dan 100 actieve licenties en complexe omgevingen.',
       'plan.ent.f1': 'Meer dan 100 actieve licenties',
-      'plan.ent.f2': 'Alle connectoren + Splunk',
+      'plan.ent.f2': 'Alle connectoren',
       'plan.ent.f3': 'Dedicated support & SLA',
       'plan.ent.f4': 'SSO',
+      'plan.ent.f5': 'AI-samenvattingen (optioneel)',
 
       'demo.eyebrow': 'Het platform',
       'demo.title': 'Een kijkje in LightHouse SOC',
@@ -242,6 +246,8 @@
       'ai.title': 'AI summary across your dashboards',
       'ai.body': 'Beyond alerts and insights, LightHouse SOC now generates an AI summary of every dashboard and all your logs. It saves a huge amount of time — know what’s going on in seconds.',
 
+      'ai.optin': '🔒 Off by default — only when you choose to enable it.',
+
       'pricing.eyebrow': 'Pricing',
       'pricing.title': 'Transparent and scalable',
       'pricing.subtitle': 'Priced per active Microsoft license. Pick the plan that fits your organization.',
@@ -273,13 +279,15 @@
       'plan.pro.f3': 'SSO',
       'plan.pro.f4': 'Automated playbooks',
       'plan.pro.f5': 'Priority support',
+      'plan.pro.f6': 'AI summaries (optional)',
       'plan.ent.name': 'Enterprise',
       'plan.ent.price': 'Custom',
       'plan.ent.desc': 'For more than 100 active licenses and complex environments.',
       'plan.ent.f1': 'More than 100 active licenses',
-      'plan.ent.f2': 'All connectors + Splunk',
+      'plan.ent.f2': 'All connectors',
       'plan.ent.f3': 'Dedicated support & SLA',
       'plan.ent.f4': 'SSO',
+      'plan.ent.f5': 'AI summaries (optional)',
 
       'demo.eyebrow': 'The platform',
       'demo.title': 'A look inside LightHouse SOC',
