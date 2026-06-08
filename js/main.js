@@ -17,6 +17,7 @@
       'nav.contact': 'Contact',
       'nav.cta': 'Neem contact op',
 
+      'hero.aiPill': '✨ Nieuw — AI-samenvattingen in je dashboards',
       'hero.eyebrow': 'Security Operations Center platform',
       'hero.title': 'Zie elke dreiging. Reageer in seconden.',
       'hero.lede': 'LightHouse SOC bundelt detectie, onderzoek en respons in één overzichtelijk platform. Minder ruis, snellere triage en 24/7 grip op de security van je organisatie.',
@@ -174,6 +175,7 @@
       'nav.contact': 'Contact',
       'nav.cta': 'Get in touch',
 
+      'hero.aiPill': '✨ New — AI summaries in your dashboards',
       'hero.eyebrow': 'Security Operations Center platform',
       'hero.title': 'See every threat. Respond in seconds.',
       'hero.lede': 'LightHouse SOC unifies detection, investigation and response in one clear platform. Less noise, faster triage and 24/7 control over your organization’s security.',
