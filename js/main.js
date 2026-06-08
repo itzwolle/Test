@@ -84,7 +84,7 @@
       'ai.title': 'AI-samenvatting van je dashboards',
       'ai.body': 'Naast alerts en inzichten genereert LightHouse SOC nu ook een AI-samenvatting van elk dashboard en alle logs. Dit scheelt enorm veel tijd — in seconden weet je wat er speelt.',
 
-      'ai.optin': '🔒 Niet standaard aan — alleen als je er zelf voor kiest.',
+      'ai.optin': 'AI staat <strong>standaard uit</strong> — jij kiest of je het aanzet.',
 
       'pricing.eyebrow': 'Prijzen',
       'pricing.title': 'Transparant en schaalbaar',
@@ -246,7 +246,7 @@
       'ai.title': 'AI summary across your dashboards',
       'ai.body': 'Beyond alerts and insights, LightHouse SOC now generates an AI summary of every dashboard and all your logs. It saves a huge amount of time — know what’s going on in seconds.',
 
-      'ai.optin': '🔒 Off by default — only when you choose to enable it.',
+      'ai.optin': 'AI is <strong>off by default</strong> — enable it whenever you want.',
 
       'pricing.eyebrow': 'Pricing',
       'pricing.title': 'Transparent and scalable',
