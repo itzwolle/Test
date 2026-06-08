@@ -80,6 +80,9 @@
       'made.title': 'Made in Holland — jouw data blijft in Nederland',
       'made.body': 'LightHouse SOC is volledig in Nederland ontwikkeld én gehost. Je security-data verlaat het land niet: volledige datasoevereiniteit en AVG-proof.',
 
+      'ai.title': 'AI-samenvatting van je dashboards',
+      'ai.body': 'Naast alerts en inzichten genereert LightHouse SOC nu ook een AI-samenvatting van elk dashboard en alle logs. Dit scheelt enorm veel tijd — in seconden weet je wat er speelt.',
+
       'pricing.eyebrow': 'Prijzen',
       'pricing.title': 'Transparant en schaalbaar',
       'pricing.subtitle': 'Prijs per actieve Microsoft-licentie. Kies het pakket dat bij uw organisatie past.',
@@ -233,6 +236,9 @@
 
       'made.title': 'Made in Holland — your data stays in the Netherlands',
       'made.body': 'LightHouse SOC is fully developed and hosted in the Netherlands. Your security data never leaves the country: full data sovereignty and GDPR-proof.',
+
+      'ai.title': 'AI summary across your dashboards',
+      'ai.body': 'Beyond alerts and insights, LightHouse SOC now generates an AI summary of every dashboard and all your logs. It saves a huge amount of time — know what’s going on in seconds.',
 
       'pricing.eyebrow': 'Pricing',
       'pricing.title': 'Transparent and scalable',
