@@ -55,6 +55,8 @@
       'feature.retention.body': 'Bewaar je data 30, 60, 180 of 365 dagen — afgestemd op je compliance-eisen.',
       'feature.license.title': 'Microsoft licentie-kostenrapport',
       'feature.license.body': 'Automatisch kostenoverzicht van alle licenties in je Microsoft-tenant. Zie waar je te veel betaalt en stop met betalen voor licenties die je niet gebruikt.',
+      'feature.entra.title': 'Entra app-monitoring',
+      'feature.entra.body': 'Overzicht van al je Entra-apps, met signalering van verlopen of bijna verlopen secrets en certificaten — zo loopt niets ongemerkt af.',
 
       'how.eyebrow': 'Hoe het werkt',
       'how.title': 'Van data naar respons in drie stappen',
@@ -217,6 +219,8 @@
       'feature.retention.body': 'Keep your data for 30, 60, 180 or 365 days — tailored to your compliance needs.',
       'feature.license.title': 'Microsoft license cost report',
       'feature.license.body': 'Automatic cost overview of every license in your Microsoft tenant. See where you overpay and stop paying for licenses you don’t use.',
+      'feature.entra.title': 'Entra app monitoring',
+      'feature.entra.body': 'An overview of all your Entra apps, flagging expired or soon-to-expire secrets and certificates — so nothing lapses unnoticed.',
 
       'how.eyebrow': 'How it works',
       'how.title': 'From data to response in three steps',
