@@ -167,7 +167,8 @@
       'form.errorSend': 'Verzenden lukte niet. Probeer het later opnieuw of mail ons direct.',
 
       'footer.tagline': 'De baken voor uw IT omgeving.',
-      'footer.rights': 'Alle rechten voorbehouden.'
+      'footer.rights': 'Alle rechten voorbehouden.',
+      'footer.privacy': 'Privacy'
     },
 
     en: {
@@ -331,7 +332,8 @@
       'form.errorSend': 'Sending failed. Please try again later or email us directly.',
 
       'footer.tagline': 'The beacon for your IT environment.',
-      'footer.rights': 'All rights reserved.'
+      'footer.rights': 'All rights reserved.',
+      'footer.privacy': 'Privacy'
     }
   };
 
