@@ -441,7 +441,7 @@ a { color: inherit; text-decoration: none; }
 /* ===== Features ===== */
 .feature-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
 .feature {
-  flex: 1 1 250px; max-width: 340px;
+  flex: 0 1 255px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
