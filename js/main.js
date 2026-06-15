@@ -56,7 +56,9 @@
       'feature.license.title': 'Microsoft licentie-kostenrapport',
       'feature.license.body': 'Automatisch kostenoverzicht van alle licenties in je Microsoft-tenant. Zie waar je te veel betaalt en stop met betalen voor licenties die je niet gebruikt.',
       'feature.entra.title': 'Entra app-monitoring',
-      'feature.entra.body': 'Overzicht van al je Entra-apps, met signalering van verlopen of bijna verlopen secrets en certificaten — zo loopt niets ongemerkt af.',
+      'feature.entra.body': 'Overzicht van al je Entra-apps met automatische alertmeldingen bij verlopen of bijna verlopen secrets en certificaten — zo loopt niets ongemerkt af.',
+      'feature.attack.title': 'Attack surface scanning',
+      'feature.attack.body': 'Automatische URL- en IP-scans met Nmap, met directe alertmeldingen zodra er kritieke poorten openstaan.',
 
       'how.eyebrow': 'Hoe het werkt',
       'how.title': 'Van data naar respons in drie stappen',
@@ -221,7 +223,9 @@
       'feature.license.title': 'Microsoft license cost report',
       'feature.license.body': 'Automatic cost overview of every license in your Microsoft tenant. See where you overpay and stop paying for licenses you don’t use.',
       'feature.entra.title': 'Entra app monitoring',
-      'feature.entra.body': 'An overview of all your Entra apps, flagging expired or soon-to-expire secrets and certificates — so nothing lapses unnoticed.',
+      'feature.entra.body': 'An overview of all your Entra apps with automatic alerts for expired or soon-to-expire secrets and certificates — so nothing lapses unnoticed.',
+      'feature.attack.title': 'Attack surface scanning',
+      'feature.attack.body': 'Automated URL and IP scans with Nmap, with instant alerts the moment critical ports are exposed.',
 
       'how.eyebrow': 'How it works',
       'how.title': 'From data to response in three steps',
