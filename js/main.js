@@ -441,17 +441,20 @@
       e.preventDefault();
       const dict = I18N[currentLang()];
 
-      const name = form.name.value.trim();
-      const email = form.email.value.trim();
-      const message = form.message.value.trim();
+      const nameEl = form.elements['name'];
+      const emailEl = form.elements['email'];
+      const messageEl = form.elements['message'];
+      const name = nameEl.value.trim();
+      const email = emailEl.value.trim();
+      const message = messageEl.value.trim();
 
       // Reset invalid markers
-      [form.name, form.email, form.message].forEach(function (f) { f.classList.remove('invalid'); });
+      [nameEl, emailEl, messageEl].forEach(function (f) { f.classList.remove('invalid'); });
 
       let valid = true;
-      if (!name) { form.name.classList.add('invalid'); valid = false; }
-      if (!emailRe.test(email)) { form.email.classList.add('invalid'); valid = false; }
-      if (!message) { form.message.classList.add('invalid'); valid = false; }
+      if (!name) { nameEl.classList.add('invalid'); valid = false; }
+      if (!emailRe.test(email)) { emailEl.classList.add('invalid'); valid = false; }
+      if (!message) { messageEl.classList.add('invalid'); valid = false; }
 
       if (!valid) {
         status.textContent = dict['form.error'];
